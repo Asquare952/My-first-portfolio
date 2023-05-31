@@ -4,22 +4,22 @@
   box-sizing: border-box;
 }
 body{
-  background: #e5e5e5;
+  background: #f8f8f8;
 }
 /* nav-bar */
 .nav-bar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem;
+  padding: .7rem;
   background: #ffff;
   position: sticky;
   top: 0;
 }
 .logo h1{
-  border: 5px solid yellow;
+  border: 5px solid black;
   font-size: 1.5rem;
-  padding: 5px 7px;
+  padding: 1px 3px;
   font-family:'Times New Roman', Times, serif;
 }
 .logo a {
@@ -41,6 +41,13 @@ li {
 @media (max-width: 700px) {
   ul {
     display: none;
+  }
+}
+@media (max-width: 460px) {
+  .logo h1{
+    border: 4px solid black;
+    font-size: 1rem;
+    padding: 1px 2px;
   }
 }
 /* nav-bar end  */
@@ -82,13 +89,15 @@ li {
   }
 }
 /* showcase end */
-
-/* About me */
-.about{
+/* main */
+.main{
   max-width: 1400px;
   margin: auto;
   padding: 0 1rem;
-  height: 100vh;
+}
+/* About me */
+.about{
+  height: 95vh;
 }
 .about h2{
   padding-top: 30px;
@@ -114,47 +123,163 @@ li {
 .my-skills h3{
   background: rgb(175, 166, 166);
   padding: 5px;
+  border-radius: 5px;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-@media (max-width: 850px) {
+/* @media (max-width: 850px) {
   .my-skills{
     flex: wrap;
   }
-}
+} */
 @media (max-width: 500px) {
 .about{
-  height: 200vh;
+  height: 150vh;
+}  
+}
+@media (max-width: 540px) {
+.about{
+  margin-bottom: 45rem;
+}  
+}
+@media (max-width: 412px) {
+.about{
+  height: 150vh;
+}  
+}
+@media (max-width: 1024px) {
+.about{
+  margin-bottom: 30rem;
 }  
 }
 /* experience */
 .my-experience{
-  max-width: 1300px;
-  margin: auto;
-  padding: 0 1rem;
-  /* margin-top: 10rem; */
-  
+  height: 70vh;
 }
 .my-experience-tittle{
   font-size: 30px;
   font-family: Arial, Helvetica, sans-serif;
 }
-.my-experience-head-content{
-  padding-top: 2rem;
+.my-experience-content-layout{
+  display: flex;
+  /* justify-content: center;
+  align-items: center; */
+  margin-top: 2rem;
+  gap: 4rem;
 }
-.my-experience-head-content h3{
+.left-content{
+  display: flex;
+  gap: 1rem;
+  background: rgb(44, 10, 78);
+  border-radius: .4rem;
+  color: gainsboro;
+  padding: 20px;
+  padding-right: 200px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.left-content h2{
+  padding-bottom: 6px;
+}
+img{
+ width: 40px;
+}
+.developer h4{
+  font-size: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.developer h3{
+  color: grey;
   padding-top: .5rem;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-.my-experience-head-content a{
-  font-size: 20px;
+.developer a{
   text-decoration: none;
 }
-.my-experience-content{
-  padding-top: 20px;
+.right-content{
+  padding-top: 1.5rem;
 }
-.my-experience-content h3{
-  width: 520px;
-  padding-bottom: 20px;
+.right-content h3{
+  /* width: 520px; */
+  padding-bottom: 40px;
   line-height: 0.9rem;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+@media (max-width: 500px) {
+  .my-experience-content h3{
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 820px) {
+  .my-experience-content-layout{
+    flex-direction: column;
+  }
+}
+@media (max-width: 360px) {
+  .my-experience{
+    margin-top: 50rem;
+    
+  }  
+  }
+@media (max-width: 540px) {
+  .my-experience{
+    margin-top: 40rem;
+    
+  }  
+  }
+  /* My latest work */
+  .latest-work-tittle{
+    font-size: 35px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .my-latest-work{
+   height: 150vh;
+  }
+  .works-up{
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    margin-top: 10rem;
+  }
+  .works-bottom{
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    margin-top: 10rem;
+  }
+  .card-1{
+    border: 1px solid blue;
+     padding: 7rem 10rem;
+     border-radius: .7rem;
+  }
+  .card-2{
+    border: 1px solid blue;
+     padding: 7rem 10rem;
+     border-radius: .7rem;
+  }
+  .card-3{
+    border: 1px solid blue;
+     padding: 7rem 10rem;
+     border-radius: .7rem;
+  }
+  .card-4{
+    border: 1px solid blue;
+     padding: 7rem 10rem;
+     border-radius: .7rem;
+  }
+  @media (max-width: 820px) {
+    .works-up{
+      flex-direction: column;
+    }
+    .works-bottom{
+      flex-direction: column;
+    }
+  }
+  @media (max-width: 500px) {
+    .my-latest-work{
+      margin-top: 10rem;
+    }
+  }
+  @media (max-width: 540px) {
+    .my-latest-work{
+      margin-top: 20rem;
+    }
+  }
