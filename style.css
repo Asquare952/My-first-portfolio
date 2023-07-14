@@ -3,7 +3,7 @@
   margin: 0;
   box-sizing: border-box;
 }
-body{
+body {
   background: #f8f8f8;
 }
 /* nav-bar */
@@ -11,16 +11,16 @@ body{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: .7rem;
+  padding: 0.7rem;
   background: #ffff;
   position: sticky;
   top: 0;
 }
-.logo h1{
+.logo h1 {
   border: 5px solid black;
   font-size: 1.5rem;
   padding: 1px 3px;
-  font-family:'Times New Roman', Times, serif;
+  font-family: "Times New Roman", Times, serif;
 }
 .logo a {
   font-size: 1.9rem;
@@ -38,13 +38,13 @@ li {
   text-decoration: none;
   color: gray;
 }
-@media (max-width: 700px) {
+@media (max-width: 768px) {
   ul {
     display: none;
   }
 }
 @media (max-width: 460px) {
-  .logo h1{
+  .logo h1 {
     border: 4px solid black;
     font-size: 1rem;
     padding: 1px 2px;
@@ -52,8 +52,9 @@ li {
 }
 /* nav-bar end  */
 .showcase {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("./img/nathan-da-silva-k-rKfqSm4L4-unsplash.jpg")
-    no-repeat center center/cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("./img/nathan-da-silva-k-rKfqSm4L4-unsplash.jpg") no-repeat center
+      center/cover;
   height: 100vh;
   width: 100%;
   color: #ffff;
@@ -64,11 +65,18 @@ li {
   align-items: center;
   text-align: center;
   flex-direction: column;
-  height: 90%;
+  height: 100vh;
   padding: 2rem;
 }
+.showcase-icons {
+  text-align: center;
+  padding-top: 3rem;
+}
+.showcase-social-media {
+  padding-bottom: 1rem;
+}
 .showcase-content h2 {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   padding: 5px;
   font-size: 50px;
   /* font-weight: 50px; */
@@ -79,40 +87,42 @@ li {
   font-size: 40px;
 }
 .showcase-content h3 {
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   padding: 5px;
   font-size: 30px;
 }
-@media (max-width: 500Px) {
-  .showcase-content h1{
+@media (max-width: 500px) {
+  .showcase-content h1 {
     font-size: 30px;
   }
 }
 /* showcase end */
 /* main */
-.main{
+.main {
   max-width: 1400px;
   margin: auto;
   padding: 0 1rem;
 }
 /* About me */
-.about{
-  height: 95vh;
+.about {
+  height: 650px;
 }
-.about h2{
+.about h2 {
   padding-top: 30px;
   text-align: center;
   font-size: 30px;
+  text-shadow: 3px 2px gray;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-.about p{
+.about p {
   padding-top: 2rem;
   line-height: 2.9rem;
-  font-size: 35px;
+  font-size: 30px;
   font-weight: 50px;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
-.my-skills{
+.my-skills {
   display: flex;
   /* justify-content: center; */
   align-items: center;
@@ -120,11 +130,11 @@ li {
   justify-content: space-between;
   margin-top: 2rem;
 }
-.my-skills h3{
+.my-skills h3 {
   background: rgb(175, 166, 166);
   padding: 5px;
   border-radius: 5px;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 /* @media (max-width: 850px) {
   .my-skills{
@@ -132,154 +142,279 @@ li {
   }
 } */
 @media (max-width: 500px) {
-.about{
-  height: 150vh;
-}  
+  .about {
+    height: 150vh;
+  }
 }
 @media (max-width: 540px) {
-.about{
-  margin-bottom: 45rem;
-}  
+  .about {
+    margin-bottom: 45rem;
+  }
 }
 @media (max-width: 412px) {
-.about{
-  height: 150vh;
-}  
+  .about {
+    height: 150vh;
+  }
+  @media (max-width: 360px) {
+    .about {
+      height: 170vh;
+    }
+  }
+  @media (max-width: 1024px) {
+    .about {
+      margin-bottom: 30rem;
+    }
+  }
+  /* experience */
 }
-@media (max-width: 1024px) {
-.about{
-  margin-bottom: 30rem;
-}  
-}
-/* experience */
-.my-experience{
+.my-experience {
   height: 70vh;
 }
-.my-experience-tittle{
+.experience {
+  text-shadow: 3px 2px gray;
+}
+.my-experience-tittle {
   font-size: 30px;
   font-family: Arial, Helvetica, sans-serif;
 }
-.my-experience-content-layout{
+.my-experience-content-layout {
   display: flex;
-  /* justify-content: center;
-  align-items: center; */
   margin-top: 2rem;
   gap: 4rem;
 }
-.left-content{
+.left-content {
   display: flex;
   gap: 1rem;
   background: rgb(44, 10, 78);
-  border-radius: .4rem;
+  border-radius: 0.4rem;
   color: gainsboro;
   padding: 20px;
   padding-right: 200px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
-.left-content h2{
+.left-content h2 {
   padding-bottom: 6px;
 }
-img{
- width: 40px;
+img {
+  width: 40px;
+  height: 55px;
 }
-.developer h4{
+.developer h4 {
   font-size: 20px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
-.developer h3{
+.developer h3 {
   color: grey;
-  padding-top: .5rem;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding-top: 0.5rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
-.developer a{
+.developer a {
   text-decoration: none;
 }
-.right-content{
+.right-content {
   padding-top: 1.5rem;
 }
-.right-content h3{
-  /* width: 520px; */
-  padding-bottom: 40px;
-  line-height: 0.9rem;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+.right-content h3 {
+  padding-bottom: 20px;
+  line-height: 1.5rem;
+  font-size: px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
+
 @media (max-width: 500px) {
-  .my-experience-content h3{
+  .my-experience-content h3 {
     flex-wrap: wrap;
   }
 }
-@media (max-width: 820px) {
-  .my-experience-content-layout{
+@media (max-width: 912px) {
+  .my-experience-content-layout {
+    flex-direction: column;
+  }
+}
+@media (max-width: 1024px) {
+  .my-experience-content-layout {
     flex-direction: column;
   }
 }
 @media (max-width: 360px) {
-  .my-experience{
-    margin-top: 50rem;
-    
-  }  
+  .my-experience {
+    margin-top: 100rem;
   }
+}
 @media (max-width: 540px) {
-  .my-experience{
-    margin-top: 40rem;
-    
-  }  
+  .my-experience {
+    margin-top: 30rem;
   }
-  /* My latest work */
-  .latest-work-tittle{
-    font-size: 35px;
-    font-family: Arial, Helvetica, sans-serif;
+}
+@media (max-width: 912px) {
+  .my-experience {
+    margin-top: 30rem;
   }
-  .my-latest-work{
-   height: 150vh;
+}
+@media (max-width: 820px) {
+  .my-experience {
+    margin-top: 25rem;
   }
-  .works-up{
-    display: flex;
-    justify-content: center;
-    gap: 4rem;
+}
+@media (max-width: 1024px) {
+  .my-experience {
     margin-top: 10rem;
   }
-  .works-bottom{
-    display: flex;
-    justify-content: center;
-    gap: 4rem;
+}
+/* My latest work */
+
+.latest-work-tittle {
+  font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.my-latest-work {
+  height: 115vh;
+}
+.works {
+  text-shadow: 3px 2px gray;
+}
+.works-up {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  margin-top: 10rem;
+}
+.works-bottom {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  margin-top: 10rem;
+}
+.card-1 {
+  border: 1px solid blue;
+  padding: 7rem 10rem;
+  border-radius: 0.7rem;
+  cursor: pointer;
+  transition: border 2s ease-in-out 2s;
+}
+.card-1:hover {
+  width: 300px;
+}
+.card-2 {
+  border: 1px solid blue;
+  padding: 7rem 10rem;
+  border-radius: 0.7rem;
+  cursor: pointer;
+}
+.card-3 {
+  border: 1px solid blue;
+  padding: 7rem 10rem;
+  border-radius: 0.7rem;
+  cursor: pointer;
+}
+.card-4 {
+  border: 1px solid blue;
+  padding: 7rem 10rem;
+  border-radius: 0.7rem;
+  cursor: pointer;
+}
+@media (max-width: 820px) {
+  .works-up {
+    flex-direction: column;
+  }
+  .works-bottom {
+    flex-direction: column;
+  }
+}
+@media (max-width: 500px) {
+  .my-latest-work {
     margin-top: 10rem;
   }
-  .card-1{
-    border: 1px solid blue;
-     padding: 7rem 10rem;
-     border-radius: .7rem;
+}
+@media (max-width: 540px) {
+  .my-latest-work {
+    margin-top: 20rem;
   }
-  .card-2{
-    border: 1px solid blue;
-     padding: 7rem 10rem;
-     border-radius: .7rem;
+}
+@media (max-width: 717px) {
+  .my-latest-work {
+    margin-top: 20rem;
   }
-  .card-3{
-    border: 1px solid blue;
-     padding: 7rem 10rem;
-     border-radius: .7rem;
+}
+@media (max-width: 1024px) {
+  .my-latest-work {
+    margin-top: 20rem;
   }
-  .card-4{
-    border: 1px solid blue;
-     padding: 7rem 10rem;
-     border-radius: .7rem;
+}
+
+/* footer */
+footer {
+  text-align: center;
+  background: grey;
+}
+.footer-content {
+  padding: 30px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.footer-content p {
+  font-size: 20px;
+}
+.fa-github-square {
+  font-size: 50px;
+  padding-right: 1rem;
+  color: black;
+}
+.fa-twitter-square {
+  font-size: 50px;
+  padding-right: 1rem;
+  color: blue;
+}
+.fa-linkedin-square {
+  font-size: 50px;
+  padding-right: 1rem;
+  color: blue;
+}
+.social-media {
+  padding-bottom: 10px;
+}
+@media (max-width: 370px) {
+  footer {
+    height: 200px;
   }
-  @media (max-width: 820px) {
-    .works-up{
-      flex-direction: column;
-    }
-    .works-bottom{
-      flex-direction: column;
-    }
+}
+@media (max-width: 414px) {
+  footer {
+    height: 100px;
   }
-  @media (max-width: 500px) {
-    .my-latest-work{
-      margin-top: 10rem;
-    }
+}
+@media (max-width: 360px) {
+  footer {
+    margin-top: 1000rem;
   }
-  @media (max-width: 540px) {
-    .my-latest-work{
-      margin-top: 20rem;
-    }
+}
+@media (max-width: 415px) {
+  footer {
+    margin-top: 700rem;
   }
+}
+@media (max-width: 820px) {
+  footer {
+    margin-top: 50rem;
+  }
+}
+@media (max-width: 768px) {
+  footer {
+    margin-top: 155rem;
+  }
+}
+@media (max-width: 540px) {
+  footer {
+    margin-top: 600rem;
+  }
+}
+@media (max-width: 717px) {
+  footer {
+    margin-top: 55rem;
+  }
+}
+@media (max-width: 1024px) {
+  footer {
+    margin-top: 15rem;
+  }
+}
