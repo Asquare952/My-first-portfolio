@@ -32,7 +32,10 @@ body {
   list-style: none;
 }
 li {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
+}
+.list-item:hover {
+  border-bottom: 3px solid black;
 }
 .nav-bar a {
   text-decoration: none;
@@ -64,7 +67,7 @@ li {
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
     url("./img/nathan-da-silva-k-rKfqSm4L4-unsplash.jpg") no-repeat center
       center/cover;
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   color: #ffff;
 }
@@ -113,9 +116,9 @@ li {
 /* About me */
 .about {
   /* height: 650px; */
-  margin-bottom: 15rem;
+ min-height: 100vh;
 }
-.about-me {
+.about-title {
   padding-top: 30px;
   text-align: center;
   font-size: 30px;
@@ -133,8 +136,8 @@ li {
 .my-skills {
   display: flex;
   /* justify-content: center; */
-  align-items: center;
-  text-align: center;
+  /* align-items: center;
+  text-align: center; */
   justify-content: space-between;
   margin-top: 2rem;
 }
@@ -144,23 +147,66 @@ li {
   border-radius: 5px;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
+@media (max-width: 420px) {
+  .my-skills{
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 2rem;
+  }
+}
+@media (max-width: 475px) {
+  .about{
+    height: 200vh;
+  }
+}
+@media (max-width: 360px) {
+  .about{
+    min-height: 250vh;
+  }
+}
+@media (max-width: 540px) {
+  .about{
+    min-height: 150vh;
+  }
+}
+@media (max-width: 717px) {
+  .about{
+    margin-bottom: 30rem;
+  }
+}
+@media (max-width: 280px) {
+  .about{
+    min-height: 50vh;
+  }
+  body{
+    font-size: 10px;
+  }
+  .about p{
+    font-size: 15px;
+  }
+  .about-title{
+    font-size: 20px;
+  }
+}
 
   /* experience */
 .my-experience {
-  height: 70vh;
+  min-height: 90vh;
 }
 .experience {
   text-shadow: 3px 2px gray;
   font-size: 35px;
   /* font-weight: 30px; */
 }
-.my-experience-tittle {
+.experience-tittle {
+  text-align: center;
   font-size: 30px;
   font-family: Arial, Helvetica, sans-serif;
 }
-.my-experience-content-layout {
+.experience-content-layout {
   display: flex;
-  margin-top: 2rem;
+  margin-top: 3rem;
   gap: 4rem;
 }
 .left-content {
@@ -176,7 +222,7 @@ li {
 .left-content h2 {
   padding-bottom: 6px;
 }
-img {
+ img {
   width: 40px;
   height: 55px;
 }
@@ -205,161 +251,146 @@ img {
 }
 
 @media (max-width: 500px) {
-  .my-experience-content h3 {
+  .experience-content h3 {
     flex-wrap: wrap;
   }
 }
-@media (max-width: 912px) {
+/* @media (max-width: 912px) {
   .my-experience-content-layout {
     flex-direction: column;
+  }
+} */
+@media (max-width: 1024px) {
+  .experience-content-layout {
+    flex-direction: column;
+  }
+}
+@media (max-width: 992px) {
+  .right-content {
+    padding: 20px 20px;
   }
 }
 @media (max-width: 1024px) {
-  .my-experience-content-layout {
-    flex-direction: column;
-  }
-}
-@media (max-width: 360px) {
-  .my-experience {
-    margin-top: 5rem;
-    margin-bottom: 25rem;
-  }
-}
-@media (max-width: 412px) {
-  .my-experience {
-    margin-top: 5rem;
-    margin-bottom: 25rem;
+  .right-content {
+    padding: 20px 20px;
   }
 }
 @media (max-width: 540px) {
+  .my-experience{
+    min-height: 150vh;
+  }
+}
+@media (max-width: 470px) {
   .my-experience {
-    margin-bottom: 25rem;
+    min-height: 150vh;
   }
 }
 @media (max-width: 280px) {
-  .my-experience {
-    margin-bottom: 35rem;
+  .right-item {
+    font-size: 15px;
   }
-}
-@media (max-width: 1024px) {
-  .my-experience {
-    margin-bottom: 20rem;
+  .experience{
+    font-size: 20px;
   }
-}
-@media (max-width: 375px) {
-  .my-experience {
-    margin-bottom: 30rem;
+  .developer{
+    font-size: 15px;
   }
 }
 
-/* My latest work */
-.my-latest-work {
-  margin-bottom: 5rem;
+/* Projects */
+.projects-container {
+ min-height: 50vh;
+ text-align: center;
 }
-.works {
+.project-tittle h2{
   font-size: 35px;
   font-family: Arial, Helvetica, sans-serif;
   text-shadow: 3px 2px gray;
+  
 }
-.works-up {
+.projects{
   display: flex;
-  justify-content: center;
-  gap: 4rem;
-  margin-top: 5rem;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  height: auto;
+  margin-top: 2rem;
 }
-.works-bottom {
-  display: flex;
-  justify-content: center;
-  gap: 4rem;
-  margin-top: 5rem;
+.projects-img{
+  width: 500px;
+  height: 300px;
+    border-radius: .8rem;
+
 }
-.card-1 {
-  border: 1px solid blue;
-  padding: 7rem 10rem;
-  border-radius: 0.7rem;
-  cursor: pointer;
+.card {
+  width: 500px;
+  height: 300px;
+  margin: 35px auto;
+  text-align: center;
+  box-shadow: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25),
+    0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15);
+    transition: transform 150ms ease-in-out;
+    border-radius: 2rem;
 }
-.card-2 {
-  border: 1px solid blue;
-  padding: 7rem 10rem;
-  border-radius: 0.7rem;
-  cursor: pointer;
+.card:hover {
+    transform: scale(1.1);
 }
-.card-3 {
-  border: 1px solid blue;
-  padding: 7rem 10rem;
-  border-radius: 0.7rem;
-  cursor: pointer;
-}
-.card-4 {
-  border: 1px solid blue;
-  padding: 7rem 10rem;
-  border-radius: 0.7rem;
-  cursor: pointer;
-}
-@media (max-width: 820px) {
-  .works-up {
-    flex-direction: column;
+@media (max-width: 720px) {
+  .card{
+    width: 300px;
   }
-  .works-bottom {
-    flex-direction: column;
-  }
+  .projects-img{
+  width: 300px;
 }
-@media (max-width: 360px) {
-  .my-latest-work{
-    margin-top: 35rem;
+}
+@media (max-width: 290px) {
+   .card{
+    width: 200px;
   }
+  .projects-img{
+  width: 200px;
+}
 }
  @media (max-width: 339px) {
-  .card-1 {
-  border: 1px solid blue;
-  padding: 7rem 5rem;
-}
-.card-2 {
-  border: 1px solid blue;
-  padding: 7rem 5rem;
-}
-.card-3 {
-  border: 1px solid blue;
-  padding: 7rem 5rem;
-}
-.card-4 {
-  border: 1px solid blue;
-  padding: 7rem 5rem;
-}
+ 
 }
 /* footer */
 .main-footer {
   background: #000;
   color: #fff;
+  padding: 4rem;
 }
 .footer-info {
   text-align: center;
-  padding: 1rem 0;
+  /* padding: 5rem 0; */
 }
 .footer-content p {
   font-size: 35px;
 }
 .fa-github-square {
   font-size: 35px;
-  padding-right: 1rem;
+  padding-right: 2rem;
   color: rgb(37, 37, 37);
 }
 .fa-twitter-square {
   font-size: 35px;
-  padding-right: 1rem;
-  color: blue;
+  padding-right: 2rem;
+  color: white;
 }
 .fa-linkedin-square {
   font-size: 35px;
-  padding-right: 1rem;
-  color: blue;
+  padding-right: 2rem;
+  color: white;
 }
 .social-media {
   margin-top: 10px;
   margin-bottom: 10px;
 }
-
+@media (max-width: 400px) {
+  .main-footer{
+    padding: 15px 15px;
+  }
+}
 @media (max-width: 900px) {
   .works{
     text-align: center;
